@@ -1,64 +1,126 @@
-# AI-based Flood Prediction and Risk Alarm System 
+🌊 AI-based Flood Prediction and Risk Alarm System
+📌 Overview
 
-##  Project Overview
-This project predicts the risk of floods using historical and climatic data.  
-It falls under the theme **Climate Risk and Disaster Management**.
+Floods are one of the most devastating natural disasters, causing loss of life, damage to infrastructure, and severe economic impacts. This project aims to develop an AI-based Flood Prediction and Risk Alarm System that predicts the probability of flooding based on multiple environmental, climatic, and anthropogenic factors. By leveraging machine learning models, the system provides timely alerts and insights for effective disaster management.
 
-## ⚙️ Steps Completed (Week 1)
-- Imported necessary libraries  
-- Loaded and explored dataset  
-- Cleaned missing values and duplicates  
-- Performed descriptive statistics and visualizations  
+📊 Dataset
 
-##  Files
-- `flood_prediction.ipynb` → Jupyter Notebook with code  
-- `dataset.csv` → Dataset used  
+Source: Kaggle (Flood Prediction Dataset)
 
-# 🌊 Flood Prediction – Week 2 Assessment
+File: flood.csv (processed as flood_processed.csv)
 
-## 📌 Overview
-This week’s assessment focuses on **Exploratory Data Analysis (EDA)**, **data transformation**, and **feature selection** for the flood prediction dataset.  
-The goal was to preprocess the data and identify the most important features that influence flood probability.
+Size: ~50,000 records, 21 features
 
----
+Features include:
 
-## 🔹 Tasks Done
-### 1. Exploratory Data Analysis (EDA)
-- Checked for missing values and dataset summary statistics.
-- Visualized feature distributions and target variable (`FloodProbability`).
-- Plotted correlation heatmap to identify highly related features.
+MonsoonIntensity
 
-### 2. Data Transformation
-- Scaled features using **StandardScaler** to bring them to the same scale.
-- Structured dataset into input features (`X`) and target variable (`y`).
-- Created a processed dataset `flood_processed.csv` for model training.
+TopographyDrainage
 
-### 3. Feature Selection
-- Used **correlation analysis** to find strong relationships with the target.
-- Applied **Mutual Information (MI)** to capture non-linear dependencies.
-- Implemented **Random Forest feature importance** to rank key factors.
+RiverManagement
 
----
+Deforestation
 
-## 🔹 Key Improvisations from Week 1
-- Added **correlation heatmap** and improved visualization in EDA.
-- Applied **scaling and normalization** for cleaner data.
-- Introduced **multiple feature selection methods** (Correlation, MI, Random Forest).
-- Saved **processed dataset** for reuse in modeling.
+Urbanization
 
----
+ClimateChange
 
-## 📂 Files
-- `eda_flood.ipynb` → Jupyter Notebook with full analysis  
-- `flood.csv` → Original dataset  
-- `flood_processed.csv` → Transformed dataset after preprocessing  
+DamsQuality
 
----
+Siltation
 
-## 🚀 Next Steps
-- Build machine learning models on the processed dataset.  
-- Compare performance using selected features vs. all features.  
-- Optimize feature engineering and hyperparameters.
+AgriculturalPractices
 
----
+Encroachments
 
+IneffectiveDisasterPreparedness
+
+DrainageSystems
+
+CoastalVulnerability
+
+Landslides
+
+Watersheds
+
+DeterioratingInfrastructure
+
+PopulationScore
+
+WetlandLoss
+
+InadequatePlanning
+
+PoliticalFactors
+
+Target → FloodProbability
+
+⚙️ Project Workflow
+
+Data Preprocessing
+
+Cleaned missing values & standardized the dataset.
+
+Scaled numerical features for better model performance.
+
+Created a processed version: flood_processed.csv.
+
+Exploratory Data Analysis (EDA)
+
+Univariate, Bivariate & Multivariate Analysis.
+
+Correlation heatmaps to identify influential factors.
+
+Visualizations for interpretability of risk factors.
+
+Model Development
+
+Trained multiple machine learning models:
+
+Logistic Regression
+
+Random Forest
+
+XGBoost
+
+Decision Tree, SVM, etc.
+
+Compared all features vs. selected features.
+
+Optimized hyperparameters for better accuracy.
+
+Evaluation Metrics
+
+Accuracy, Precision, Recall, F1-score.
+
+ROC-AUC for probability-based performance.
+
+Deployment
+
+Built an interactive Streamlit web app (streamlit_app.py).
+
+User inputs factor values → System predicts flood probability.
+
+Visual dashboards for easy interpretation.
+
+🚀 Results & Improvisations
+
+Achieved improved model accuracy with feature selection & tuning.
+
+Enhanced interpretability with clear factor-wise visualizations.
+
+Converted raw dataset into a processed, model-ready version.
+
+Built an interactive, user-friendly app for real-world usability.
+
+Added a presentation (PPT) for project demonstration.
+
+📂 Project Structure
+├── flood.csv                # Original dataset
+├── flood_processed.csv      # Cleaned & processed dataset
+├── eda.ipynb                # Exploratory Data Analysis
+├── model_training.ipynb     # Model building & evaluation
+├── streamlit_app.py         # Web application for predictions
+├── requirements.txt         # Dependencies
+├── README.md                # Project documentation
+└── presentation.pptx        # Project presentation
